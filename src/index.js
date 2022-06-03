@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react'
+import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 import store from './store'
@@ -12,13 +12,11 @@ const root = createRoot(container)
 
 // eslint-disable-next-line jest/require-hook
 root.render(
-  <StrictMode>
-    <Router>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </Router>
-  </StrictMode>,
+  <Router>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </Router>,
 )
 
 // If you want to start measuring performance in your app, pass a function

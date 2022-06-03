@@ -4,7 +4,6 @@ import { Provider } from 'react-redux'
 import store from './store'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import { BrowserRouter as Router } from 'react-router-dom'
 import './index.css'
 
 const container = document.getElementById('root')
@@ -12,11 +11,9 @@ const root = createRoot(container)
 
 // eslint-disable-next-line jest/require-hook
 root.render(
-  <Router>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </Router>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
 )
 
 // If you want to start measuring performance in your app, pass a function
